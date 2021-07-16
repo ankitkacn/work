@@ -34,7 +34,7 @@ sidebar_label: V2 Docs Guide
         icon="img/bobby-pin.svg"
         iconDark="img/bobby-pin-dark.svg"
         overlay="Second overlay (no content specified in comps"
-        title="Write a Move program"
+        title="Write a move program"
         type="snippetTab"
       />
     )},
@@ -173,6 +173,7 @@ class HelloWorld {
   <CoreReference />
   <MerchantReference />
   <WalletReference />
+  <MoveReference />
   <NodeReference />
 </CardsWrapper>
 
@@ -226,7 +227,7 @@ function Example() {
         icon="img/bobby-pin.svg"
         iconDark="img/bobby-pin-dark.svg"
         overlay="Second overlay (no content specified in comps"
-        title="Write a Move program"
+        title="Write a move program"
         type="snippetTab"
       />
     )},
@@ -328,7 +329,7 @@ class HelloWorld {
         color="purpleLight"
         icon="img/bobby-pin.svg"
         iconDark="img/bobby-pin-dark.svg"
-        title="Write a Move program"
+        title="Write a move program"
         type="snippetTab"
       />
     )},

@@ -32,6 +32,16 @@ const WalletReference = () => (
   />
 );
 
+const MoveReference = () => (
+  <SimpleTextCard
+    icon="img/move.svg"
+    iconDark="img/move-dark.svg"
+    smallerImage
+    title="Move overview"
+    to="/docs/move/overview"
+  />
+);
+
 const NodeReference = () => (
   <SimpleTextCard
     icon="img/node-operators.svg"
@@ -46,5 +56,6 @@ export default {
   CoreReference,
   MerchantReference,
   WalletReference,
+  MoveReference,
   NodeReference,
 };

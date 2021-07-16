@@ -126,6 +126,10 @@ module.exports = {
           to: "/docs/governance",
         },
         {
+          label: "Community",
+          to: "https://community.diem.com/",
+        },
+        {
           isExternal: true,
           label: "GitHub",
           to: "https://github.com/diem/",

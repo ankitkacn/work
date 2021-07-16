@@ -369,7 +369,7 @@ jobs:
 
   unit-test:
     runs-on: ubuntu-20.04-xl
-    timeout-minutes: 60
+    timeout-minutes: 120
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
@@ -530,7 +530,7 @@ jobs:
 
   forge-test:
     runs-on: ubuntu-latest-xl
-    timeout-minutes: 40
+    timeout-minutes: 70
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' && needs.prepare.outputs.test-compatibility == 'true' }}
     container:
@@ -964,3 +964,37 @@ jobs:
         uses: ./.github/actions/early-terminator
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
+
+  developers-site:
+    name: run-developer-site-build
+    runs-on: ubuntu-latest
+    if: ${{ needs.prepare.outputs.test-website-build == 'true' }}
+    steps:
+      # Checks-out the Diem website repository under $GITHUB_WORKSPACE, so job can access it
+      - uses: actions/checkout@v2.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/cache@v2.1.6
+      # Installs node and yarn
+      - name: Use Node.js 12
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '14'
+      # Install git
+      - name: Install git
+        run: |
+          sudo apt --assume-yes update
+          sudo apt --assume-yes install git
+      # Install Python 3.8
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      # Test that building the site is successful
+      - name: Build Site
+        run: |
+          cd developers.diem.com
+          # Only build the straight Docusaurus site now. Do not build rust `-r`
+          # or python docs `-p` on CI checks until we resolve the best way to
+          # build them for deployment
+          ./scripts/build_docs.sh -b

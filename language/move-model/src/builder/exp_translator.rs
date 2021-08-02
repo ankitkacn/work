@@ -656,7 +656,7 @@ impl<'env, 'translator, 'module_translator> ExpTranslator<'env, 'translator, 'mo
             Ref(is_mut, ty) => Type::Reference(*is_mut, Box::new(self.translate_type(ty))),
             Fun(args, result) => Type::Fun(
                 self.translate_types(args),
-                Box::new(self.translate_type(result)),
+                Box::new(self.translate_type(&*result)),
             ),
             Unit => Type::Tuple(vec![]),
             Multiple(vst) => Type::Tuple(self.translate_types(vst)),

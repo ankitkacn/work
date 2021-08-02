@@ -173,7 +173,7 @@ impl SMRNode {
                 .collect(),
         );
         // sort by the peer id
-        node_configs.sort_by_key(author_from_config);
+        node_configs.sort_by_key(|n1| author_from_config(n1));
 
         let proposer_type = match proposer_type {
             RoundProposer(_) => {

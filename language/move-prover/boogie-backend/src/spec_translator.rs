@@ -323,7 +323,6 @@ impl<'env> SpecTranslator<'env> {
                     );
                 }
             }
-            emitln!(self.writer);
         } else {
             emitln!(self.writer, " {");
             self.writer.indent();
@@ -331,8 +330,9 @@ impl<'env> SpecTranslator<'env> {
             emitln!(self.writer);
             self.writer.unindent();
             emitln!(self.writer, "}");
-            emitln!(self.writer);
         }
+
+        emitln!(self.writer);
     }
 }
 

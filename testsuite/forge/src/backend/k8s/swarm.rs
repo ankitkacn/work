@@ -455,6 +455,7 @@ pub fn clean_k8s_cluster(
     (0..MAX_NUM_VALIDATORS).into_par_iter().for_each(|i| {
         remove_validator(&format!("val{}", i)).unwrap();
     });
+    println!("All validators removed");
 
     let tmp_dir = TempDir::new().expect("Could not create temp dir");
 
@@ -496,6 +497,7 @@ pub fn clean_k8s_cluster(
             String::from_utf8(validator_helm_patch_output.stderr).unwrap()
         );
     });
+    println!("All validators prepped for upgrade");
 
     // upgrade validators in parallel
     (0..base_num_validators).into_par_iter().for_each(|i| {
@@ -517,6 +519,7 @@ pub fn clean_k8s_cluster(
         ];
         upgrade_validator(&format!("val{}", i), &helm_repo, &validator_upgrade_options).unwrap();
     });
+    println!("All validators upgraded");
 
     // upgrade testnet
     let testnet_upgrade_args = [
@@ -544,6 +547,7 @@ pub fn clean_k8s_cluster(
         "{}",
         String::from_utf8(testnet_upgrade_output.stderr).unwrap()
     );
+    println!("Testnet upgraded");
 
     let rt = Runtime::new().unwrap();
 

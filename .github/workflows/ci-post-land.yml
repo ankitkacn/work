@@ -90,8 +90,8 @@ jobs:
   # update this report to differentiate branches.
   unit-test-allure-report:
     name: Unit Test Reports
-    runs-on: ubuntu-20.04
-    if: ${{ github.ref == 'refs/heads/latest' }}
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: Sccache
     container:

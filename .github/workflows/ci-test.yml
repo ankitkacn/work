@@ -400,9 +400,7 @@ jobs:
     runs-on: ubuntu-20.04-xl
     timeout-minutes: 50
     needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' && github.event_name == 'push' }}
-    environment:
-      name: Sccache
+    if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
       image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:

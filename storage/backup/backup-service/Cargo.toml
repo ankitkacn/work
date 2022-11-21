@@ -19,9 +19,9 @@ tokio = { version = "1.18.2", features = ["full"] }
 warp = "0.3.0"
 
 bcs = "0.1.2"
-diem-crypto = { path = "../../../crypto/crypto" }
-diem-logger = { path = "../../../common/logger" }
-diem-metrics = { path = "../../../common/metrics" }
+diem-crypto = { path = "../../../crates/diem-crypto" }
+diem-logger = { path = "../../../crates/diem-logger" }
+diem-metrics = { path = "../../../crates/diem-metrics" }
 diem-types = { path = "../../../types" }
 diem-workspace-hack = { path = "../../../crates/diem-workspace-hack" }
 diemdb = { path = "../../diemdb" }
@@ -30,7 +30,7 @@ storage-interface = { path = "../../storage-interface" }
 [dev-dependencies]
 diemdb = { path = "../../diemdb", features = ["fuzzing"] }
 diem-config = { path = "../../../config" }
-diem-temppath = { path = "../../../common/temppath" }
+diem-temppath = { path = "../../../crates/diem-temppath" }
 
 reqwest = { version = "0.11.2", features = ["blocking", "json"], default_features = false }
 

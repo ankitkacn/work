@@ -19,10 +19,10 @@ structopt = "0.3.21"
 diemdb = { path = "../diemdb" }
 diemdb-benchmark = { path = "../diemdb-benchmark" }
 diem-config = { path = "../../config" }
-diem-crypto = { path = "../../crypto/crypto" }
+diem-crypto = { path = "../../crates/diem-crypto" }
 diem-genesis-tool = {path = "../../config/management/genesis", features = ["testing"] }
-diem-infallible = { path = "../../common/infallible" }
-diem-logger = { path = "../../common/logger" }
+diem-infallible = { path = "../../crates/diem-infallible" }
+diem-logger = { path = "../../crates/diem-logger" }
 diem-types = { path = "../../types" }
 diem-workspace-hack = { path = "../../crates/diem-workspace-hack" }
 executor-types = { path = "../../execution/executor-types" }

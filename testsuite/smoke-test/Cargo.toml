@@ -34,27 +34,27 @@ serde_yaml = "0.8.17"
 backup-cli = { path = "../../storage/backup/backup-cli" }
 cli = { path = "../cli", features = ["fuzzing"]  }
 diem-framework-releases = { path = "../../language/diem-framework/releases" }
-debug-interface = { path = "../../common/debug-interface" }
+debug-interface = { path = "../../crates/debug-interface" }
 futures = "0.3.12"
 generate-key = { path = "../../config/generate-key" }
 move-move-command-line-common = { path = "../../language/move-command-line-common", package = "move-command-line-common" }
 move-stdlib = { path = "../../language/move-stdlib" }
 diem-config = { path = "../../config" }
-diem-crypto = { path = "../../crypto/crypto" }
+diem-crypto = { path = "../../crates/diem-crypto" }
 diem-genesis-tool = {path = "../../config/management/genesis", features = ["testing"] }
 diem-global-constants = { path = "../../config/global-constants" }
-diem-infallible = { path = "../../common/infallible" }
+diem-infallible = { path = "../../crates/diem-infallible" }
 diem-json-rpc = { path = "../../json-rpc" }
 diem-json-rpc-types = { path = "../../json-rpc/types" }
 diem-key-manager = { path = "../../secure/key-manager" }
-diem-logger = { path = "../../common/logger" }
+diem-logger = { path = "../../crates/diem-logger" }
 diem-management = { path = "../../config/management", features = ["testing"] }
 diem-operational-tool = {path = "../../config/management/operational", features = ["testing"] }
 diem-secure-storage = { path = "../../secure/storage", features = ["testing"] }
 diem-smoke-test-attribute = { path = "../smoke-test/attribute" }
 diem-swarm = { path = "../diem-swarm"}
-diem-temppath = { path = "../../common/temppath" }
-diem-time-service = { path = "../../common/time-service", features = ["testing"] }
+diem-temppath = { path = "../../crates/diem-temppath" }
+diem-time-service = { path = "../../crates/diem-time-service", features = ["testing"] }
 diem-transaction-replay = { path = "../../language/diem-tools/transaction-replay" }
 diem-types = { path = "../../types" }
 diem-vault-client = { path = "../../secure/storage/vault", features = ["fuzzing"] }

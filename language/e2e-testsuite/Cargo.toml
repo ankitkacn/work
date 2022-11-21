@@ -15,7 +15,7 @@ language-e2e-tests = { path = "../testing-infra/e2e-tests" }
 bytecode-verifier = { path = "../bytecode-verifier" }
 bcs = "0.1.2"
 compiler = { path = "../compiler" }
-diem-crypto = { path = "../../crypto/crypto", features = ["fuzzing"] }
+diem-crypto = { path = "../../crates/diem-crypto", features = ["fuzzing"] }
 diem-types = { path = "../../types", features = ["fuzzing"] }
 move-core-types = { path = "../move-core/types" }
 move-vm-runtime = { path = "../move-vm/runtime" }
@@ -24,7 +24,7 @@ diem-transaction-builder = { path = "../../sdk/transaction-builder"}
 move-binary-format = { path = "../move-binary-format" }
 diem-vm = { path = "../diem-vm" }
 proptest = "1.0.0"
-diem-logger = { path = "../../common/logger" }
+diem-logger = { path = "../../crates/diem-logger" }
 diem-framework-releases = { path = "../diem-framework/releases" }
 diem-workspace-hack = { path = "../../crates/diem-workspace-hack" }
 diem-writeset-generator = { path = "../diem-tools/writeset-transaction-generator"}

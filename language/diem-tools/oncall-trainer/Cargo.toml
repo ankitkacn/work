@@ -21,12 +21,12 @@ gag = "0.1.10"
 bcs = "0.1.2"
 
 cli = { path = "../../../testsuite/cli" }
-diem-client = { path = "../../../sdk/client/"}
+diem-client = { path = "../../../crates/diem-client/"}
 diem-config = { path = "../../../config" }
 diem-framework-releases = { path = "../../diem-framework/releases"}
 diem-genesis-tool = { path = "../../../config/management/genesis" }
 diem-json-rpc-types = { path = "../../../json-rpc/types" }
 diem-types = { path = "../../../types" }
 diem-node = { path = "../../../diem-node"}
-diem-temppath = { path = "../../../common/temppath" }
+diem-temppath = { path = "../../../crates/diem-temppath" }
 diem-workspace-hack = { path = "../../../crates/diem-workspace-hack" }

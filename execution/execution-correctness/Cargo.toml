@@ -15,13 +15,13 @@ executor = { path = "../executor" }
 executor-types = { path = "../executor-types" }
 bcs = "0.1.2"
 diem-config = { path = "../../config" }
-diem-crypto = { path = "../../crypto/crypto" }
+diem-crypto = { path = "../../crates/diem-crypto" }
 diem-global-constants = { path = "../../config/global-constants"}
-diem-logger = { path = "../../common/logger" }
-diem-infallible = { path = "../../common/infallible" }
+diem-logger = { path = "../../crates/diem-logger" }
+diem-infallible = { path = "../../crates/diem-infallible" }
 diem-secure-net = { path = "../../secure/net" }
 diem-secure-storage = { path = "../../secure/storage" }
-diem-temppath = { path = "../../common/temppath" }
+diem-temppath = { path = "../../crates/diem-temppath" }
 diem-types = { path = "../../types" }
 diem-vm = { path = "../../language/diem-vm" }
 diem-workspace-hack = { path = "../../crates/diem-workspace-hack" }

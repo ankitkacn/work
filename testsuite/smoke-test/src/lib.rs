@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 pub mod event_fetcher;
+pub mod replay_tooling;
+pub mod scripts_and_modules;
 pub mod transaction;
 pub mod verifying_client;
 
@@ -28,12 +30,6 @@ mod operational_tooling;
 
 #[cfg(test)]
 mod release_flow;
-
-#[cfg(test)]
-mod replay_tooling;
-
-#[cfg(test)]
-mod scripts_and_modules;
 
 #[cfg(test)]
 mod state_sync;

@@ -17,6 +17,9 @@ RUN mkdir -p /github/home \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-mark hold git
+RUN apt-mark hold git-man
+
 ENV PATH "/opt/cargo/bin:/usr/lib/golang/bin:/github/home/bin:$PATH"
 ENV DOTNET_ROOT "/github/home/.dotnet"
 ENV Z3_EXE "/github/home/bin/z3"

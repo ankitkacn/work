@@ -172,7 +172,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: build image with dev-setup.sh
-        run: docker build -f docker/ci/${{ matrix.target_os }}/Dockerfile -t diem/build_environment:test .
+        run: docker build -f docker/ci/${{ matrix.target_os }}/Dockerfile -t diem/diem_build_environment:latest .
       - name: Early terminate workflow
         if: ${{ failure() }}
         uses: ./.github/actions/early-terminator

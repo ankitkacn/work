@@ -40,3 +40,5 @@ Diem Core implements a decentralized, programmable database which provides a fin
 ## License
 
 Diem Core is licensed as [Apache 2.0](https://github.com/diem/diem/blob/latest/LICENSE).
+
+### Test Purpose

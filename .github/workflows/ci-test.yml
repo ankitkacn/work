@@ -416,7 +416,7 @@ jobs:
             }
 
   non-rust-lint:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 10
     needs: prepare
     if: ${{ needs.prepare.outputs.test-non-rust-lint == 'true'  }}
@@ -444,10 +444,14 @@ jobs:
       #   with:
       #     github-token: ${{secrets.GITHUB_TOKEN}}
   lint:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 30
     needs: prepare
     if: ${{ needs.prepare.outputs.any-changes-founds == 'true' }}
+    container:
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      volumes:
+        - "${{github.workspace}}:/opt/git/diem"
     steps:
       - uses: actions/checkout@v2.4.0
         with:
@@ -472,7 +476,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   unit-test:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 120
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
@@ -514,7 +518,7 @@ jobs:
       - uses: ./.github/actions/build-teardown
 
   codegen-unit-test:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 60
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
@@ -544,7 +548,7 @@ jobs:
       - uses: ./.github/actions/build-teardown
 
   e2e-test:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 70
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
@@ -633,7 +637,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   forge-test:
-    runs-on: ubuntu-latest-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 120
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' && needs.prepare.outputs.test-compatibility == 'true' }}
@@ -688,7 +692,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   crypto-unit-test:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 60
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
@@ -825,7 +829,7 @@ jobs:
 
   api_spec_test:
     name: API specification test
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, testnet-runner]
     needs: prepare
     if: ${{ needs.prepare.outputs.test-api-spec == 'true' }}
     container:
@@ -841,7 +845,7 @@ jobs:
 
   # Compile (but don't run) the benchmarks, to insulate against bit rot
   build-benchmarks:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 30
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
@@ -869,7 +873,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   build-dev:
-    runs-on: ubuntu-20.04-xl
+    runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 30
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}

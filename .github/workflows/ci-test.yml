@@ -168,6 +168,7 @@ jobs:
       matrix:
         target_os: [alpine, arch, github]
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -192,6 +193,7 @@ jobs:
         target_images:
           [client faucet cluster-test forge, init tools validator validator-tcb]
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           fetch-depth: 0 #get all the history!!!
@@ -261,6 +263,7 @@ jobs:
       # The last matrix build to succeed will set the output.   Hilarious.
       prev-tag: ${{ steps.build-extra-images.outputs.prev-tag }}
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -423,6 +426,7 @@ jobs:
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -486,6 +490,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -528,6 +533,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -647,6 +653,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.3.4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -702,6 +709,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -760,6 +768,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-helm == 'true' }}
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -838,9 +847,10 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.3.4
       - uses: ./.github/actions/build-setup
-      - name:
+      - name: test
         working-directory: api
         run: make test
 
@@ -855,6 +865,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -883,6 +894,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -913,6 +925,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-website-build == 'true' }}
     steps:
+      - run: git config --global --add safe.directory '*'
       # Checks-out the Diem website repository under $GITHUB_WORKSPACE, so job can access it
       - uses: actions/checkout@v2.4.0
         with:
@@ -952,7 +965,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   land-blocking-test-forge:
-    name: Run land blocking test in Forge
+    name: Run land blocking test in Forge new
     runs-on: [self-hosted, ACP]
     needs: [prepare, build-images, need-base-images]
     if: ${{ always() && needs.build-images.result=='success' && needs.prepare.outputs.test-land-blocking == 'true' }}
@@ -960,6 +973,7 @@ jobs:
       forge-result: ${{ steps.post-test-result.outputs.forge-result }}
     timeout-minutes: 45
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           # This ensures that the tip of the PR is checked out instead of the merge between the base ref and the tip
@@ -1083,6 +1097,7 @@ jobs:
       forge-result: ${{ steps.post-test-result.outputs.forge-result }}
     timeout-minutes: 45
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.3.4
         with:
           # This ensures that the tip of the PR is checked out instead of the merge between the base ref and the tip

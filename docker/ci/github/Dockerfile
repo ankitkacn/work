@@ -17,7 +17,7 @@ RUN mkdir -p /github/home \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# install git 
+# Install git
 RUN add-apt-repository ppa:git-core/ppa
 RUN apt update
 RUN apt install git

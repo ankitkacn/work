@@ -1,4 +1,4 @@
-FROM debian:buster-20230202@sha256:9153fba7b4aa3bc8a5c58b02a2a0c65350fd9682a35a155a85b8a9aafcf3295d AS setup_ci
+FROM debian:buster-20210721@sha256:cc58a29c333ee594f7624d968123429b26916face46169304f07580644dde6b2 AS setup_ci
 
 RUN mkdir /diem
 COPY rust-toolchain /diem/rust-toolchain
@@ -17,7 +17,13 @@ RUN mkdir -p /github/home \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git config --global --add safe.directory /__w/diem/diem
+# install git 
+RUN add-apt-repository ppa:git-core/ppa
+RUN apt update
+RUN apt install git
+RUN git version
+RUN git config --global --add safe.directory '*'
+    
 
 ENV PATH "/opt/cargo/bin:/usr/lib/golang/bin:/github/home/bin:$PATH"
 ENV DOTNET_ROOT "/github/home/.dotnet"

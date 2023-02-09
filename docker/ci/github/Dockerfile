@@ -18,6 +18,8 @@ RUN mkdir -p /github/home \
     && rm -rf /var/lib/apt/lists/*
 
 #Install git
+RUN apt install software-properties-common
+RUN apt update
 RUN add-apt-repository ppa:git-core/ppa
 RUN apt update
 RUN apt install git

@@ -453,6 +453,7 @@ jobs:
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}

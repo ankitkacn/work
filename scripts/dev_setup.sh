@@ -772,7 +772,7 @@ if [[ "$INSTALL_BUILD_TOOLS" == "true" ]]; then
   install_cargo_guppy
   install_sccache
   install_grcov
-  # install_pkg git "$PACKAGE_MANAGER"
+  install_pkg git "$PACKAGE_MANAGER"
   install_lcov "$PACKAGE_MANAGER"
 fi
 
@@ -781,7 +781,7 @@ if [[ "$OPERATIONS" == "true" ]]; then
   install_pkg python3 "$PACKAGE_MANAGER"
   install_pkg unzip "$PACKAGE_MANAGER"
   install_pkg jq "$PACKAGE_MANAGER"
-  # install_pkg git "$PACKAGE_MANAGER"
+  install_pkg git "$PACKAGE_MANAGER"
   install_tidy "$PACKAGE_MANAGER"
   install_xsltproc
   #for timeout

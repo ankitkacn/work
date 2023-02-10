@@ -17,16 +17,6 @@ RUN mkdir -p /github/home \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-#Install git
-RUN apt update
-RUN apt install software-properties-common
-RUN apt update
-RUN add-apt-repository ppa:git-core/ppa
-RUN apt update
-RUN apt install git
-RUN git version
-RUN git config --global --add safe.directory '*'
-
 ENV PATH "/opt/cargo/bin:/usr/lib/golang/bin:/github/home/bin:$PATH"
 ENV DOTNET_ROOT "/github/home/.dotnet"
 ENV Z3_EXE "/github/home/bin/z3"

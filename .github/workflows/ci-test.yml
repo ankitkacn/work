@@ -256,7 +256,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   need-base-images:
-    runs-on: [self-hosted, ACP]
+    runs-on: [self-hosted, testnet-runner]
     needs: prepare
     if: ${{ github.event_name == 'push' && needs.prepare.outputs.build-images == 'true' && needs.prepare.outputs.need-base-images == 'true' }}
     outputs:
@@ -573,6 +573,7 @@ jobs:
       FLAKY_TESTS_FILE: /tmp/failures
       MESSAGE_PAYLOAD_FILE: /tmp/message
     steps:
+      - run: git config --global --add safe.directory '*'
       - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -966,7 +967,7 @@ jobs:
 
   land-blocking-test-forge:
     name: Run land blocking test in Forge new
-    runs-on: [self-hosted, ACP]
+    runs-on: [self-hosted, testnet-runner]
     needs: [prepare, build-images, need-base-images]
     if: ${{ always() && needs.build-images.result=='success' && needs.prepare.outputs.test-land-blocking == 'true' }}
     outputs:
@@ -1090,7 +1091,7 @@ jobs:
 
   land-blocking-test-forge-new:
     name: Run land blocking test in Forge
-    runs-on: self-hosted
+    runs-on: [self-hosted, testnet-runner]
     needs: [prepare, build-images, need-base-images]
     if: ${{ always() && needs.build-images.result=='success' && needs.prepare.outputs.test-land-blocking == 'true' }}
     outputs:

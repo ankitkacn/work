@@ -4,7 +4,7 @@ on:
   create:
     branches: [latest, release-*]
   push:
-    branches: [canary, main, latest, release-*]
+    branches: [main, latest, release-*]
 
 defaults:
   run:

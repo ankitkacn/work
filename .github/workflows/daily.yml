@@ -6,7 +6,6 @@ on:
   # Uncomment below to test.
   # push:
   #   branches: [gha-test-*, canary, auto]
-
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -57,7 +56,7 @@ jobs:
       - uses: ./.github/actions/build-teardown
 
   coverage:
-    runs-on: ubuntu-latest-xl
+    runs-on: testnet-runner-ubuntu
     container:
       image: diem/build_environment:latest
       volumes:
@@ -105,14 +104,14 @@ jobs:
     # Test old client from release (prod) and pre-release (rc) branches
     # against new server in the latest branch through cluster-test's
     # json-rpc interface.
-    runs-on: ubuntu-latest-xl
+    runs-on: testnet-runner-ubuntu
     container:
       image: diem/build_environment:latest
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     env:
       DEVNET_MINT_TEST_KEY: ${{ secrets.DEVNET_MINT_TEST_KEY }}
-      DEVNET_ENDPOINT: dev.testnet.diem.com
+      DEVNET_ENDPOINT: testnet.diem.com
       MESSAGE_PAYLOAD_FILE: /tmp/message
     strategy:
       fail-fast: false
@@ -126,10 +125,10 @@ jobs:
       - name: Run cluster test diag on devnet
         run: |
           echo ${DEVNET_MINT_TEST_KEY} | base64 -d > /tmp/mint_test.key
-          RUST_BACKTRACE=full cargo run -p cluster-test -- --diag --swarm --mint-file=/tmp/mint_test.key --peers=dev.testnet.diem.com:80:80 --chain-id=TESTNET > ${MESSAGE_PAYLOAD_FILE}
+          RUST_BACKTRACE=full cargo run -p cluster-test -- --diag --swarm --mint-file=/tmp/mint_test.key --peers=testnet.diem.com --chain-id=TESTNET > ${MESSAGE_PAYLOAD_FILE}
       - name: Run cluster test to submit random txn to devnet
         run: |
-          RUST_BACKTRACE=full cargo run -p cluster-test -- --emit-tx --swarm --mint-file=/tmp/mint_test.key --peers=dev.testnet.diem.com:80:80 --chain-id=DEVNET --accounts-per-client=2 --workers-per-ac=2 --duration=30 >> ${MESSAGE_PAYLOAD_FILE}
+          RUST_BACKTRACE=full cargo run -p cluster-test -- --emit-tx --swarm --mint-file=/tmp/mint_test.key --peers=testnet.diem.com --chain-id=TESTNET --accounts-per-client=2 --workers-per-ac=2 --duration=30 >> ${MESSAGE_PAYLOAD_FILE}
       - uses: ./.github/actions/slack-file
         with:
           webhook: ${{ secrets.WEBHOOK_BREAKING_CHANGE }}
@@ -138,7 +137,7 @@ jobs:
       - uses: ./.github/actions/build-teardown
 
   prover-inconsistency-test:
-    runs-on: ubuntu-latest-xl
+    runs-on: testnet-runner-ubuntu
     container:
       image: diem/build_environment:${{ matrix.target-branch }}
       volumes:

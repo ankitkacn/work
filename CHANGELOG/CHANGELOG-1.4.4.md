@@ -64,6 +64,7 @@ and updating it to version 0.1.4.
 
 
 8. Thus, all test cases are working fine and diem code is build. Fixed PR [#5](https://github.com/diem/bcs/pull/5)
+
 Hash - 4b6129db12b0e2ad72e02c58a1dfee3294e4bc3b
 
 -----
@@ -93,14 +94,26 @@ consensus/src/round_manager.rs
 
 ```
 ---
-### Observed Changes
+### Notable Changes
 ---
+[Consensus]
+1. Remove Move IR type inference [#9040](https://github.com/diem/diem/pull/9040) [#10707](https://github.com/diem/diem/pull/10717)
+2. connect everything and add tests [#9111](https://github.com/diem/diem/pull/9111) [#10695](https://github.com/diem/diem/pull/10695)
 
-1. Address consistent failures of the inconsistency test in CI [#8851](https://github.com/diem/diem/pull/10475)
-2. Ported ValidatorConfig and ValidatorOperatorConfig to unit tests [#9131](https://github.com/diem/diem/pull/9131) [#10717](https://github.com/diem/diem/pull/10717)
-3. Refactor the verification analysis [#9034](https://github.com/diem/diem/pull/10667)
-4. Support bytecode for vector ops in the Move VM [#8821](https://github.com/diem/diem/pull/10669)
-5. Remove unused diagnostics [#9023](https://github.com/diem/diem/pull/10663)
-6. Move : [transactional-tests]  [#9042](https://github.com/diem/diem/pull/10675)
-7. Convert a number of smoke-tests to use LocalSwarm [#9027](https://github.com/diem/diem/pull/9027)
-8. Add a new EventSubscriptionService and tests [#9117](https://github.com/diem/diem/pull/9117) [#10717](https://github.com/diem/diem/pull/10717)
+[Diem Framework]
+1. Port ValidatorConfig and ValidatorOperatorConfig to unit tests [9131](https://github.com/diem/diem/pull/9131) [#10717](https://github.com/diem/diem/pull/10717)
+
+[Language]
+1. make inconsistency check instrumentation a separate pass [#10475](https://github.com/diem/diem/pull/10475)
+2. refactor the verification analysis [#9034](https://github.com/diem/diem/pull/10667) [#10667](https://github.com/diem/diem/pull/10667)
+3. [move-vm] support bytecode for vector ops in the Move VM [#8821](https://github.com/diem/diem/pull/10669/files) [#10669](https://github.com/diem/diem/pull/10669)
+4. Remove unused diagnostics [#9023](https://github.com/diem/diem/pull/10663/files) [#10663](https://github.com/diem/diem/pull/10663)
+5. Move : [transactional-tests] More migrated tests [#10675](https://github.com/diem/diem/pull/10675)
+
+[State-Sync]
+1. Add a new EventSubscriptionService and tests[#9117](https://github.com/diem/diem/pull/9117) [#10717](https://github.com/diem/diem/pull/10717)
+2. [State Sync] Add MempoolNotifier interface and implementation [#10683](https://github.com/diem/diem/pull/10683)
+
+[Testsuite]
+1. smoke-test: convert a number of smoke-tests to use LocalSwarm [#9027](https://github.com/diem/diem/pull/9027) [#10680](https://github.com/diem/diem/pull/10680)
+2. Add forge LBT in ci-test [#9039](https://github.com/diem/diem/pull/9039) [#10701](https://github.com/diem/diem/pull/10701)

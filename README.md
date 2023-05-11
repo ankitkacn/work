@@ -3,7 +3,6 @@
 	<img width="200" src="./.assets/diem.png" alt="Diem Logo" />
 </a>
 
--------
 
 [![Diem Rust Crate Documentation (main)](https://img.shields.io/badge/docs-main-59f)](https://diem.github.io/diem/)
 [![License](https://img.shields.io/badge/license-Apache-green.svg)](LICENSE)

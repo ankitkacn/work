@@ -1,10 +1,10 @@
 # Changelog
 
-diem-core-v1.4.4
+## [diem-core-v1.4.4](https://github.com/diem/diem/tree/release-1.4.4)
 -----
-----
 
-# Two Security Fixes
+
+## Two Security Fixes
 -----
 ## 1. First Security Fix - BCS Vulnerability 
 ---

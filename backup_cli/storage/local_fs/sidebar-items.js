@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["LocalFs","A storage backend that stores everything in a local directory."],["LocalFsOpt",""]]};

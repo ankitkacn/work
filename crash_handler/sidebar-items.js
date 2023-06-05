@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["setup_panic_handler","Invoke to ensure process exits on a thread panic."]],"struct":[["CrashInfo",""]]};

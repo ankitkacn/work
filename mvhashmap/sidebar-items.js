@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["Error",""]],"struct":[["MVHashMap",""],["MVHashMapView",""]],"type":[["Version","A structure that holds placeholders for each write to the database"]]};

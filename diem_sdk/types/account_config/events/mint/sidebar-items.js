@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["MintEvent","Struct that represents a MintEvent."]]};

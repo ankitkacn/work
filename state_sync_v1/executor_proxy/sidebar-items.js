@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":[["ExecutorProxyTrait","Proxies interactions with execution and storage for state synchronization"]]};

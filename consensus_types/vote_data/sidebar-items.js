@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["VoteData","VoteData keeps the information about the block, and its parent."],["VoteDataHasher","Cryptographic hasher for an BCS-serializable #item"]]};

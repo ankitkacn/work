@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["verify_module_script_function","This function checks the extra requirements on the signature of the script visible function when it serves as an entry point for script execution"],["verify_script","This function checks the extra requirements on the signature of the main function of a script."]]};

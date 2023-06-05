@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["CliError",""]],"trait":[["Command","Trait for all CLI commands"]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["GitCli","Support for source control operations through running Git commands."],["GitHash","A Git hash."]]};

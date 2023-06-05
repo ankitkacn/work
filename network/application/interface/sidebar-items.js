@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":[["NetworkInterface","A generic `NetworkInterface` for applications to connect to networking"]]};

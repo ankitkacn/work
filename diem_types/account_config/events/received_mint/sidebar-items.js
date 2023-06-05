@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["ReceivedMintEvent","Struct that represents a ReceivedMintEvent."]]};

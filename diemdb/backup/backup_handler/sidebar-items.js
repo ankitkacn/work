@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["BackupHandler","`BackupHandler` provides functionalities for DiemDB data backup."],["DbState",""]]};

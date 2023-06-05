@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["NoiseStream","A Noise stream with a remote peer."]]};

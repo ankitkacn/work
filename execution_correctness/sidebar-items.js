@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["ExecutionCorrectnessManager",""],["Process",""]],"trait":[["ExecutionCorrectness","Interface for ExecutionCorrectness. It is basically the same as BlockExecutor except some interfaces will return signature with result."]]};

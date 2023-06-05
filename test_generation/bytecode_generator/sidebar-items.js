@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["BytecodeGenerator","Generates a sequence of bytecode instructions. This generator has:"],["FunctionGenerationContext","Context containing information about a function"]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["PreburnEvent","Struct that represents a PreburnEvent."]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["BaseUrlRotationEvent","Struct that represents a BaseUrlRotationEvent."]]};

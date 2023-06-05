@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["SystemError","A system error that happened while running a lint."]],"type":[["Result","Type alias for the return type for `run` methods."]]};

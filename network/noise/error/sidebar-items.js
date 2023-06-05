@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["NoiseHandshakeError","Different errors than can be raised when negotiating a Noise handshake."]]};

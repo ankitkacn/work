@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["AdminTransactionEvent","Struct that represents a AdminEvent."]]};

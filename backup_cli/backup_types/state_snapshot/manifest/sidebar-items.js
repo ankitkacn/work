@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["StateSnapshotBackup","State snapshot backup manifest, representing a complete state view at specified version."],["StateSnapshotChunk","A chunk of a state snapshot manifest, representing accounts in the key range [`first_key`, `last_key`] (right side inclusive)."]]};

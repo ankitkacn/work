@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["request",""],["response",""]],"struct":[["StreamingClient","This API is experimental and subject to change Documentation is in /json-rpc/src/stream_rpc/README.md"],["StreamingClientConfig","Configuration options for the `Streaming Client`"],["SubscriptionStream",""]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["PreburnQueueResource","The preburn balance held under an account."]]};

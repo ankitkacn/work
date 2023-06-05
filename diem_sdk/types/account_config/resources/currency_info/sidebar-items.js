@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["CurrencyInfoResource","Struct that represents a CurrencyInfo resource"]]};

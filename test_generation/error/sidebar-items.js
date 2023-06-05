@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["VMError","This struct represents an error that is returned during the testcase generation process."]]};

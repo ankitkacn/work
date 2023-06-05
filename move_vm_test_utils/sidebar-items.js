@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["BlankStorage","A dummy storage containing no modules or resources."],["DeltaStorage","The new storage can be used for additional computations without modifying the base."],["InMemoryStorage","Simple in-memory storage that can be used as a Move VM storage backend for testing purposes."]]};

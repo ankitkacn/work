@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["fuzz_execute_and_commit_blocks",""],["fuzz_execute_and_commit_chunk",""]],"struct":[["FakeDb","A fake database implementing DbReader and DbWriter"],["FakeVM","A fake VM implementing VMExecutor"]]};

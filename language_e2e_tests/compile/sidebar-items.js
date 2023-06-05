@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["compile_module","Compile the provided Move code into a blob which can be used as the code to be published (a Module)."],["compile_script","Compile the provided Move code into a blob which can be used as the code to be executed (a Script)."]]};

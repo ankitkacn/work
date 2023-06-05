@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["create_storage_service_and_executor",""],["run_benchmark","Runs the benchmark with given parameters."]],"struct":[["TransactionExecutor",""],["TransactionGenerator",""]]};

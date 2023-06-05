@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["dependency_graph",""]],"struct":[["Modules","Set of Move modules indexed by module Id"]]};

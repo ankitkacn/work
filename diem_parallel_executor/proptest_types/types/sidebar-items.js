@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["ExpectedOutput","Sequential baseline of execution result for dummy transaction."],["Transaction","A naive transaction that could be used to test the correctness and throughput of the system."]],"struct":[["ImpreciseInferencer",""],["Inferencer",""],["Output",""],["Task",""],["TransactionGen",""],["TransactionGenParams",""]]};

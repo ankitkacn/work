@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["EpochEndingRestoreController",""],["EpochEndingRestoreOpt",""],["EpochHistory","Represents a history of epoch changes since epoch 0."],["EpochHistoryRestoreController",""],["PreheatedEpochEndingRestore",""]]};

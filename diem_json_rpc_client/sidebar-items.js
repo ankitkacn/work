@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["errors",""],["views",""]],"struct":[["AccountAddress","A struct that represents an account address."],["BroadcastingClient",""],["SignedTransaction","A transaction that has been signed."]]};

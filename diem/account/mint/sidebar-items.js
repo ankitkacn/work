@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["MintAccount","Mint coins to an account"]]};

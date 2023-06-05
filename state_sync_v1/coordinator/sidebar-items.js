@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["SyncRequest","A sync request for a specified target ledger info."]]};

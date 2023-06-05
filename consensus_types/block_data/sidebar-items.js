@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["BlockType",""]],"struct":[["BlockData","Block has the core data of a consensus block that should be persistent when necessary. Each block must know the id of its parent and keep the QuorurmCertificate to that parent."],["BlockDataHasher","Cryptographic hasher for an BCS-serializable #item"]]};

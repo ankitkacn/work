@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["RefID","Unique identifier for the reference"]]};

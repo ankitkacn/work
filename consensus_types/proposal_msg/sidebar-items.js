@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["ProposalMsg","ProposalMsg contains the required information for the proposer election protocol to make its choice (typically depends on round and proposer info)."]]};

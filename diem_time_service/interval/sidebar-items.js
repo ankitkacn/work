@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Interval","Stream returned by `TimeService::interval`."]]};

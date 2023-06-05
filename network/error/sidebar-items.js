@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["NetworkErrorKind",""]],"struct":[["NetworkError","Errors propagated from the network module."]]};

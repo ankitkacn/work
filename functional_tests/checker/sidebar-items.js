@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["directives",""],["matcher","This module implements a matcher that checks if an evaluation log matches the patterns specified by a list of directives."]]};

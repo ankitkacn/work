@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["test_helpers",""]],"struct":[["MerkleAccumulator","In this live Merkle Accumulator algorithms."]],"trait":[["HashReader","Defines the interface between `MerkleAccumulator` and underlying storage."]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["ContentContext",""]],"trait":[["ContentLinter","Represents a linter that checks file contents."]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["SyncState","SyncState contains the following fields:"]]};

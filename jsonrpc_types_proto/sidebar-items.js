@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":[["constants","Defines constants for enum type values See the following Diem JSON-RPC response type documents for more details:"],["types",""]]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["KeyGen","Ed25519 key generator."]]};

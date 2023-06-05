@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["benchmark",""],["read_benchmark","Read benchmark from data file."],["stats_benchmarks","Print statistics for the given set of benchmarks. TODO: would be nice to have a histogram instead of textual output."]],"struct":[["Benchmark","Represents a benchmark."],["BenchmarkData","A data entry of a benchmark."]]};

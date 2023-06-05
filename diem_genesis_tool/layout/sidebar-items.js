@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Layout","Layout defines the set of roles to identities within genesis. In practice, these identities will map to distinct namespaces where the expected data should be stored in the deterministic location as defined within this tool."],["SetLayout",""]]};

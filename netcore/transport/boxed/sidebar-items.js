@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["BoxedTransport","See the boxed method for more information."]],"type":[["Inbound",""],["Listener",""],["Outbound",""]]};

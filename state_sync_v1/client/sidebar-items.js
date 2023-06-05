@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":[["CoordinatorMessage","Messages used by the StateSyncClient for communication with the StateSyncCoordinator."]],"struct":[["StateSyncClient","A client used for communicating with a StateSyncCoordinator."]]};

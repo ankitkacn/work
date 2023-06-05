@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["compile","Compile the user modules in `sources` against the dependencies in `interface_files`, placing the resulting binaries in `output_dir`."]]};

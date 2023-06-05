@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["CommandAdapter","A BackupStorage that delegates required APIs to configured command lines. see `CommandAdapterConfig`."],["CommandAdapterOpt",""]]};

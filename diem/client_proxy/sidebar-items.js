@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["is_address","Check whether the input string is a valid diem address."],["is_authentication_key","Check whether the input string is a valid diem authentication key."],["retrieve_waypoint","Retrieve a waypoint given the URL."]],"struct":[["ClientProxy","Proxy handling CLI commands/inputs."]]};

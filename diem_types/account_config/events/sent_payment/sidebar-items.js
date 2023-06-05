@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["SentPaymentEvent","Struct that represents a SentPaymentEvent."]]};
